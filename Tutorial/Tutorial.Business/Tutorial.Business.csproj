@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tutorial.Data\Tutorial.Data.csproj" />
+    <ProjectReference Include="..\Tutorial.Global\Tutorial.Global.csproj" />
+    <ProjectReference Include="..\Tutorial.Security\Tutorial.Security.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RequestValidation\" />
+  </ItemGroup>
+
+</Project>
