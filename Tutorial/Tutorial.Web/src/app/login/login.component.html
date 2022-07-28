@@ -1,0 +1,64 @@
+<header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md fixed-top" id="docs-navbar">
+    <nav role="navigation" id="mainNav" class="container-fluid" aria-label="Main navigation">
+        <!-- LOGO ORANGE & BACK TO INDEX PAGE -->
+        <a class="navbar-brand" href="./index.html">
+            <img src="assets/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" width="50" height="50" loading="lazy">
+            <!-- TITLE WELCOME -->
+            <span class="h1 mb-0">Welcome to SPOT portal</span>
+        </a>
+    </nav>
+</header>
+<main role="main" id="content" class="my-5 py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group" >
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+                        <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                            <div *ngIf="f['username'].errors['required']">Username is required</div>
+                        </div>
+                        <label for="exampleInputEmail2">Password</label>
+                        <input type="text" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">Password is required</div>
+                        </div>
+                    </div>
+                    <button [disabled]="loading" class="btn btn-lg btn-primary btn-block">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Sign in
+                    </button>
+                    <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- FOOTER STICK -->
+<footer role="contentinfo" class="o-footer navbar-dark bg-dark fixed-bottom">
+    <div class="o-footer-bottom">
+        <div class="container">
+            <div class="row mb-0">
+                <!-- Info sur la gauche -->
+                <ul class="nav mr-auto">
+                    <!-- Custom HTML footer -->
+                    <li class="nav-item">
+                        <span class="mt-2 small nav-link" trspan="version">V 3.0.0</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="mt-2 small nav-link">© Orange 2021</span>
+                    </li>
+                </ul>
+                <!-- info a droite - Langue du site -->
+                <ul class="nav">
+                    <li class="mt-2 small nav-item nav-link text-right">
+                        <span id="languages ">en-US</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
