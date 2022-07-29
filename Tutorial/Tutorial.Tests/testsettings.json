@@ -1,0 +1,23 @@
+{
+  "Jwt": {
+    "SecretKey": "db3OIsj+BXE9NZDy0t8W3TcNekrF+2d/1sFnWG4HnV8TZY30iTOdtVWJG8abWvB1GlOgJuQZdcF2Luqm/hccMw=="
+    //"Issuer": "https://localhost:44336/",
+    //"“Audience”": "https://localhost:44336/"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "SpotDBConnection": "Data Source=EQ-EQ6289360;Database=tutorial;Integrated Security=true;"
+  },
+  "AppSettings": {
+    "LdapPort": "389",
+    "Debug": "true",
+    "TimeOutInMinute": "120"
+  }
+}
