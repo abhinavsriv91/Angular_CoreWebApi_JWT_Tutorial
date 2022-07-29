@@ -12,6 +12,8 @@
 /Tutorial/Tutorial.Security/obj
 /Tutorial/Tutorial.IOC/bin
 /Tutorial/Tutorial.IOC/obj
+/Tutorial/Tutorial.Tests/bin
+/Tutorial/Tutorial.Tests/obj
 /Tutorial/Tutorial.Web/node_modules
 /Tutorial/Tutorial.Web/dist
 /Tutorial/Tutorial.Web/.angular
